@@ -19,7 +19,7 @@ jobs:
         distribution: 'temurin'
     
     - name: Generate Gradle Wrapper
-      run: rm -rf .gradle gradle/wrapper && gradle wrapper --gradle-version 7.6.3 --distribution-type all
+      run: rm -rf .gradle gradle/wrapper && gradle wrapper --gradle-version 7.4.2
     
     - name: Build with Gradle
       run: chmod +x ./gradlew && ./gradlew build --no-daemon
