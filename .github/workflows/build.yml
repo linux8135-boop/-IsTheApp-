@@ -20,10 +20,12 @@ jobs:
     
     - name: Build with Gradle
       run: |
-        export JAVA_HOME=${{ env.JAVA_HOME_17_X64 }}
+        rm -rf ~/.gradle
+        export JAVA_HOME=/opt/hostedtoolcache/Java/17.*/x64
         export PATH=$JAVA_HOME/bin:$PATH
+        which java
         java -version
-        chmod +x ./gradlew && ./gradlew build --no-daemon
+        chmod +x ./gradlew && ./gradlew build --no-daemon -Dorg.gradle.java.home=$JAVA_HOME
     
     - name: Upload APK
       uses: actions/upload-artifact@v4
