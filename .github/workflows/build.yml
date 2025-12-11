@@ -33,7 +33,9 @@ jobs:
         gradle wrapper --gradle-version 7.4.2
     
     - name: Build with Gradle
-      run: chmod +x ./gradlew && ./gradlew build --no-daemon
+      run: |
+        rm -rf ~/.gradle
+        chmod +x ./gradlew && ./gradlew build --no-daemon
     
     - name: Upload APK
       uses: actions/upload-artifact@v4
