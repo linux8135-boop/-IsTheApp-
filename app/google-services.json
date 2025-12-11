@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "287150335804",
+    "project_id": "accept-terms-5745a",
+    "storage_bucket": "accept-terms-5745a.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:287150335804:android:b0483f6d334a57c9e06039",
+        "android_client_info": {
+          "package_name": "com.github.midros.istheapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCoi2M3O6c7qCeC0ol9q5UNiaFi0yWzsUw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
