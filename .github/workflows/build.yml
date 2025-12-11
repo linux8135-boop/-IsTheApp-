@@ -13,19 +13,13 @@ jobs:
     - uses: actions/checkout@v3
     
     - name: Set up JDK 17
-      uses: actions/setup-java@v3
+      uses: actions/setup-java@v4
       with:
         java-version: '17'
         distribution: 'temurin'
     
     - name: Build with Gradle
-      run: |
-        rm -rf ~/.gradle
-        export JAVA_HOME=/opt/hostedtoolcache/Java/17.*/x64
-        export PATH=$JAVA_HOME/bin:$PATH
-        which java
-        java -version
-        chmod +x ./gradlew && ./gradlew build --no-daemon -Dorg.gradle.java.home=$JAVA_HOME
+      run: chmod +x ./gradlew && ./gradlew build --no-daemon
     
     - name: Upload APK
       uses: actions/upload-artifact@v4
